@@ -1,25 +1,41 @@
+#!/usr/bin/env python3
 import socket
-
-def client_program():
-    host = socket.gethostname()  # as both code is running on same pc
-    port = 5000  # socket server port number
-
-    client_socket = socket.socket()  # instantiate
-    client_socket.connect((host, port))  # connect to the server
-
-    message = input(" -> ")  # take input
-
-    while message.lower().strip() != 'bye':
-        musica = input('digita a musica')
-        client_socket.send(message.encode())  # send message
-        data = client_socket.recv(1024).decode()  # receive response
-
-        print('Received from server: ' + data)  # show in terminal
-
-        message = input(" -> ")  # again take input
-
-    client_socket.close()  # close the connection
+import sys
+from utils import *
 
 
-if __name__ == '__main__':
-    client_program()
+HOST = socket.gethostname()     # Endereco IP do Servidor
+PORT = 5000            # Porta que o Servidor esta
+
+if len(sys.argv) > 1:
+    HOST = sys.argv[1]
+
+print('Servidor: ', (HOST, PORT))
+
+tcp = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+dest = (HOST, PORT)
+
+tcp.connect(dest)
+
+
+
+
+print('Para sair use CTRL+X\n')
+
+while True:
+    try:
+        operacao = mostrarOperacoes()   
+    except:
+        break
+
+
+    dado = escolherOperacao(operacao)
+
+    tcp.send(str.encode(dado))
+    dado = tcp.recv(1024)
+
+    if not dado:
+        break
+    print('Recebido', dado.decode())
+tcp.close()

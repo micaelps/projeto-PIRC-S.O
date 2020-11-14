@@ -1,31 +1,37 @@
+#!/usr/bin/env python3
 import socket
+import os
+import sys
 
+HOST = ''              # Endereco IP do Servidor
+PORT = 5000            # Porta que o Servidor esta
 
-def server_program():
-    # get the hostname
-    host = socket.gethostname()
-    port = 5000  # initiate port no above 1024
+tcp = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-    server_socket = socket.socket()  # get instance
-    # look closely. The bind() function takes tuple as argument
-    server_socket.bind((host, port))  # bind host address and port together
+orig = (HOST, PORT)
 
-    # configure how many client the server can listen simultaneously
-    server_socket.listen(50)
-    conn, address = server_socket.accept()  # accept new connection
-    print("Connection from: " + str(address))
-    while True:
-        # receive data stream. it won't accept data packet greater than 1024 bytes
-        data = conn.recv(1024).decode()
-        if not data:
-            # if data is not received break
-            break
-        print("from connected user: " + str(data))
-        data = input('-> cadastrar: ')
-        conn.send(data.encode())  # send data to the client
+tcp.bind(orig)
 
-    conn.close()  # close the connection
+tcp.listen(1)
 
-
-if __name__ == '__main__':
-    server_program()
+while True:
+    try:
+        con, cliente = tcp.accept()
+    except:
+        break
+    
+    pid = os.fork()
+    if pid == 0:
+        tcp.close()
+        print('Conectado por', cliente)
+        while True:
+            msg = con.recv(1024)
+            if not msg:
+                break
+            print(cliente, msg.decode())
+            con.send(msg)
+        print('Finalizando conexao do cliente', cliente)
+        con.close()
+        sys.exit(0)
+    else:
+        con.close()
