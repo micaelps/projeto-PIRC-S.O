@@ -1,3 +1,5 @@
+import sys
+
 def mostrarOperacoes():
   print('''
     1) Abrir conta.
