@@ -1,4 +1,5 @@
 import sys
+import json
 
 def mostrarOperacoes():
   print('''
@@ -21,7 +22,8 @@ def escolherOperacao(operacao):
       nome = input('Digite seu nome: ')
       senha = int(input('Digite sua senha: '))
 
-      dado = str(nome) + ',' + str(senha)
+      # dado = str(nome) + ',' + str(senha)
+      dado = json.dumps({"nome": nome, "senha": senha})
       return dado
 
     elif operacao == 2: # Depósito
@@ -29,14 +31,16 @@ def escolherOperacao(operacao):
       senha = int(input('Digite sua senha: '))
       deposito = float(input('Digite o valor: '))
 
-      dado = str(conta) + ',' + str(senha) + ',' + str(deposito)
+      # dado = str(conta) + ',' + str(senha) + ',' + str(deposito)
+      dado = json.dumps({"conta": conta, "senha": senha, "deposito": deposito})
       return dado
 
     elif operacao == 3: # Saldo
       conta = int(input('Digite o número da conta: '))
       senha = int(input('Digite sua senha: '))
 
-      dado = str(conta) + ',' + str(senha) 
+      # dado = str(conta) + ',' + str(senha)
+      dado = json.dumps({"conta": conta, "senha": senha})
       return dado
 
     elif operacao == 4: # Saque
@@ -44,7 +48,8 @@ def escolherOperacao(operacao):
       senha = int(input('Digite sua senha: '))
       saque = float(input('Digite o valor: '))
       
-      dado = str(conta) + ',' + str(senha) + ',' + str(saque)
+      # dado = str(conta) + ',' + str(senha) + ',' + str(saque)
+      dado = json.dumps({"conta": conta, "senha": senha, "saque": saque})
       return dado
 
     elif operacao == 5: # Encerrar consulta
