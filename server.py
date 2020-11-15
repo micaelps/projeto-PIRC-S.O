@@ -30,7 +30,8 @@ while True:
             if not msg:
                 break
             print(cliente, msg.decode())
-            #controller = ContaController('entidade', 'criarConta')
+            payload = msg.decode().split(',')
+            ContaController(payload)
             #con.send(msg)
         print('Finalizando conexao do cliente', cliente)
         con.close()

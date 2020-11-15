@@ -1,9 +1,11 @@
+
+
 class ContaService:
     def __init__(self):
         pass
 
     def criar(self, entidade):
-        pass
+        f = open('seu-arquivo.text', 'r')
 
     def depositar(self):
         pass

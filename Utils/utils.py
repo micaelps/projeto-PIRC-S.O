@@ -21,7 +21,7 @@ def escolherOperacao(operacao):
       nome = input('Digite seu nome: ')
       senha = int(input('Digite sua senha: '))
 
-      dado = str(nome) + ',' + str(senha)
+      dado = str(1)+ ',' + str(nome) + ',' + str(senha)
       return dado
 
     elif operacao == 2: # Depósito
@@ -29,14 +29,14 @@ def escolherOperacao(operacao):
       senha = int(input('Digite sua senha: '))
       deposito = float(input('Digite o valor: '))
 
-      dado = str(conta) + ',' + str(senha) + ',' + str(deposito)
+      dado = str(2)+ ',' + str(conta) + ',' + str(senha) + ',' + str(deposito)
       return dado
 
     elif operacao == 3: # Saldo
       conta = int(input('Digite o número da conta: '))
       senha = int(input('Digite sua senha: '))
 
-      dado = str(conta) + ',' + str(senha) 
+      dado = str(3)+ ',' +str(conta) + ',' + str(senha) 
       return dado
 
     elif operacao == 4: # Saque
@@ -44,7 +44,7 @@ def escolherOperacao(operacao):
       senha = int(input('Digite sua senha: '))
       saque = float(input('Digite o valor: '))
       
-      dado = str(conta) + ',' + str(senha) + ',' + str(saque)
+      dado = str(4)+ ',' +str(conta) + ',' + str(senha) + ',' + str(saque)
       return dado
 
     elif operacao == 5: # Encerrar consulta
