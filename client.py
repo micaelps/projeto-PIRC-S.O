@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import socket
 import sys
-from utils import *
+from Utils.utils import *
 
 
 HOST = socket.gethostname()     # Endereco IP do Servidor

@@ -2,6 +2,7 @@
 import socket
 import os
 import sys
+from Controllers.ContaController import ContaController
 
 HOST = ''              # Endereco IP do Servidor
 PORT = 5000            # Porta que o Servidor esta
@@ -29,7 +30,8 @@ while True:
             if not msg:
                 break
             print(cliente, msg.decode())
-            con.send(msg)
+            #controller = ContaController('entidade', 'criarConta')
+            #con.send(msg)
         print('Finalizando conexao do cliente', cliente)
         con.close()
         sys.exit(0)
