@@ -2,6 +2,10 @@
 import socket
 import sys
 from Menu.menu import *
+from selenium import webdriver
+import time
+
+
 
 HOST = socket.gethostname()     # Endereco IP do Servidor
 PORT = 5000            # Porta que o Servidor esta
@@ -27,5 +31,16 @@ while True:
     dado = tcp.recv(1024)
     if not dado:
         break
-    print(dado.decode())
+
+    operacao = mostrarMusicas(dado.decode())
+    site = escolherMusica(operacao-1, dado.decode())
+
+    firefox = webdriver.Firefox()
+    firefox.get(site)
+
+    time.sleep(5)
+
+    botao = firefox.find_element_by_xpath('//*[@class="vagaPlayAlpha"]')
+    botao.click()
+
 tcp.close()
