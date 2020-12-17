@@ -18,7 +18,7 @@ def escolherOperacao(operacao):
       trecho = input('Digite o trecho: ')
 
       # dado = str(nome) + ',' + str(senha)
-      dado = f'/ENVIO/10/{trecho}/{len(trecho)}/{datetime.now()}'
+      dado = f'/ENVIO/13/{trecho}/{len(trecho)}/{datetime.now()}'
       return dado
       '''
       MODO: ENVIO, RETORNO, ERRO
@@ -37,15 +37,16 @@ def escolherOperacao(operacao):
 def pegarLista(resposta):
   resposta = resposta.split('[')[1]
   resposta = resposta.split(']')[0]
-  lista = resposta.split(',')
+  lista = resposta.split("',")
   # print(lista)
   return lista
 
 
 def mostrarMusicas(resposta):
   lista = pegarLista(resposta)
-  for i in range(len(lista)):
-    print(f"[{i+1}] - {lista[i].split(' - ')[0]} - {lista[i].split(' - ')[1]}")
+  if lista:
+    for i in range(len(lista)):
+      print(f"[{i+1}] - {lista[i].split(' - ')[0]} - {lista[i].split(' - ')[1]}")
   
   operacao = int(input('\nDigite o número correspondente a opção desejada: '))
   return operacao

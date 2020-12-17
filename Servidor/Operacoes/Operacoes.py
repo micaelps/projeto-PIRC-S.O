@@ -10,4 +10,4 @@ def busca(protocolo):
     a = a.json()['response']
     for i in a['docs']:
         retorno.append(f"{i['title']} - {i['band']} - URL: {i['url']}")
-    return f'/OK/RETORNO/20/{str(retorno)}/{len(str(retorno))}/{datetime.now()}'
+    return f'/RETORNO/19/{str(retorno)}/{len(str(retorno))}/{datetime.now()}'

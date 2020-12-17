@@ -2,7 +2,7 @@ class Protocolo:
     '''
     modo: ENVIO, RETORNO, ERRO
     codigo: 13, 19, 27
-    dado: string no formato = /modo/codigo/dado/tamanho_dado/datetime
+    dado: string
     tamanho_dado: len(dado)
     datetime: datetime 
     '''

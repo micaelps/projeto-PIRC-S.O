@@ -38,7 +38,7 @@ while True:
     firefox = webdriver.Firefox()
     firefox.get(site)
 
-    time.sleep(5)
+    time.sleep(8)
 
     botao = firefox.find_element_by_xpath('//*[@class="vagaPlayAlpha"]')
     botao.click()
