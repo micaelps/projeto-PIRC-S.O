@@ -87,3 +87,41 @@ JavaScript error: https://cdn.ravenjs.com/3.17.0/raven.min.js, line 2: NS_ERROR_
 JavaScript error: https://cdn.ravenjs.com/3.17.0/raven.min.js, line 2: NS_ERROR_NOT_INITIALIZED: 
 JavaScript error: https://cdn.ravenjs.com/3.17.0/raven.min.js, line 2: NS_ERROR_NOT_INITIALIZED: 
 JavaScript error: https://cdn.viadata.store/js/player/201126.js line 1 > eval, line 1: NotSupportedError: The media resource indicated by the src attribute or assigned media provider object was not suitable.
+1608244805365	geckodriver	INFO	Listening on 127.0.0.1:34007
+1608244805384	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilezaPDjn"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1608244809715	Marionette	INFO	Listening on port 45309
+1608244809879	Marionette	WARN	TLS certificate errors will be ignored for this session
+1608245031289	geckodriver	INFO	Listening on 127.0.0.1:37753
+1608245031311	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile0H4GqX"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1608245035450	Marionette	INFO	Listening on port 44927
+1608245035546	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1608245044757	Marionette	INFO	Stopped listening on port 44927
+1608245174436	geckodriver	INFO	Listening on 127.0.0.1:46731
+1608245174471	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileLjZ6eW"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1608245178462	Marionette	INFO	Listening on port 36191
+1608245178519	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 726))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 376))
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1608245272408	Marionette	INFO	Stopped listening on port 45309
+1608245272411	Marionette	INFO	Stopped listening on port 36191
+1608245826980	geckodriver	INFO	Listening on 127.0.0.1:45121
+1608245826991	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileFyXyeV"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1608245830976	Marionette	INFO	Listening on port 34691
+1608245831029	Marionette	WARN	TLS certificate errors will be ignored for this session
+1608245833354	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+JavaScript warning: https://api.cazamba.com/common/czmb.min.js, line 2: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: https://cdn.viadata.store/js/player/201126.js, line 1: unreachable code after return statement
+1608245870225	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1608245870228	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'interactive'.
+1608245870445	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: resource://pdf.js/PdfStreamConverter.jsm, line 1089: NS_ERROR_FAILURE: Ignore PDF.js for this download.
+JavaScript error: , line 0: AbortError: The fetching process for the media resource was aborted by the user agent at the user's request.
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1608247254497	Marionette	INFO	Stopped listening on port 34691

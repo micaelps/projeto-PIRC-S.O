@@ -10,7 +10,6 @@ def threaded(c):
 			print('Cliente desconectado') 
 			break
 		retorno = roteador(dataString)
-		# retorno = busca(data.decode())
 		c.send(retorno.encode())
 	c.close() 
 
@@ -30,7 +29,6 @@ def Main():
 		my_thread = threading.Thread(target=threaded, args=(c,))
 		my_thread.setDaemon(True)
 		my_thread.start()
-	s.close() 
 
 if __name__ == '__main__': 
 	Main() 

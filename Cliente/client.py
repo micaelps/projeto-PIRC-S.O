@@ -22,25 +22,21 @@ tcp.connect(dest)
 print('Para sair use CTRL+X\n')
 
 while True:
-    try:
-        operacao = mostrarOperacoes()   
-    except:
-        break
+    operacao = mostrarOperacoes()   
     dado = escolherOperacao(operacao)
-    tcp.send(str.encode(dado))
-    dado = tcp.recv(1024)
+
     if not dado:
         break
-
+    tcp.send(str.encode(dado))
+    dado = tcp.recv(1024)
     operacao = mostrarMusicas(dado.decode())
     site = escolherMusica(operacao-1, dado.decode())
 
-    firefox = webdriver.Firefox()
-    firefox.get(site)
-
-    time.sleep(8)
-
-    botao = firefox.find_element_by_xpath('//*[@class="vagaPlayAlpha"]')
-    botao.click()
+    if site:
+        firefox = webdriver.Firefox()
+        firefox.get(site)
+        time.sleep(8)
+        botao = firefox.find_element_by_xpath('//*[@class="vagaPlayAlpha"]')
+        botao.click()
 
 tcp.close()
