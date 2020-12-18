@@ -1,4 +1,7 @@
 # projeto-PIRC-S.O
+Alunos:
+* Micael Pinheiro da Silva
+* Anderson Lima
 
 DOCUMENTAÇÃO:  
 
