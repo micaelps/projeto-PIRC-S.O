@@ -22,7 +22,7 @@ DOCUMENTAÇÃO:
 
 o servidor retornará algo se o envio estiver dentro do padrão, caso contrário retornará erro.
 
-Exemplo de envio:  /ENVIO/13/simples/18/2020-12-18 09:46:43.452828
+Exemplo de envio:  /ENVIO/13/simples/7/2020-12-18 09:46:43.452828
 ------------
 
 REQUISITOS:
